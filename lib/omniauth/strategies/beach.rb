@@ -2,14 +2,14 @@ require "omniauth-oauth2"
 
 module OmniAuth
   module Strategies
-    class Nuwe < OmniAuth::Strategies::OAuth2
+    class Beach < OmniAuth::Strategies::OAuth2
 
-      option :name, "nuwe"
+      option :name, "beach"
 
       option :client_options, {
-        :site => "https://developer.nuwe.co",
-        :authorize_url => "https://developer.nuwe.co/oauth/authorize",
-        :token_url => "https://developer.nuwe.co/oauth/token"
+        :site => "https://developer.beach.io",
+        :authorize_url => "https://developer.beach.io/oauth/authorize",
+        :token_url => "https://developer.beach.io/oauth/token"
       }
 
       uid { raw_info["user"]["id"] }
@@ -22,7 +22,6 @@ module OmniAuth
           :sex => raw_info["user"]["profile"]["sex"],
           :birth_date => raw_info["user"]["profile"]["birth_date"],
           :activity => raw_info["user"]["profile"]["activity"]
-
         }
       end
 

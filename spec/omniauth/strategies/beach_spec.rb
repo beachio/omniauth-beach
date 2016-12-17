@@ -1,21 +1,21 @@
 require 'spec_helper'
 
-describe "OmniAuth::Strategies::Nuwe" do
+describe "OmniAuth::Strategies::Beach" do
   subject do
-    OmniAuth::Strategies::Nuwe.new({})
+    OmniAuth::Strategies::Beach.new({})
   end
 
   context 'client options' do
     it 'has the correct name' do
-      expect(subject.options.name).to eq('nuwe')
+      expect(subject.options.name).to eq('beach')
     end
 
     it 'has correct OAuth endpoint' do
-      expect(subject.options.client_options.site).to eq('https://developer.nuwe.co')
+      expect(subject.options.client_options.site).to eq('https://developer.beach.io')
     end
 
     it 'has correct authorize url' do
-      expect(subject.options.client_options.authorize_url).to eq('https://developer.nuwe.co/oauth/authorize')
+      expect(subject.options.client_options.authorize_url).to eq('https://developer.beach.io/oauth/authorize')
     end
   end
 
@@ -42,7 +42,7 @@ describe "OmniAuth::Strategies::Nuwe" do
                                   'activity' => 2 }
                               }
                   }
-                  
+
       allow(subject).to receive_messages(:raw_info => @raw_info)
     end
 

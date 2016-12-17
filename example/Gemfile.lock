@@ -1,7 +1,7 @@
 PATH
   remote: ../
   specs:
-    omniauth-nuwe (1.0.3)
+    omniauth-beach (1.0.3)
       omniauth (~> 1.0)
       omniauth-oauth2 (>= 1.1.1, < 2.0)
 
@@ -42,5 +42,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  omniauth-nuwe!
+  omniauth-beach!
   sinatra
